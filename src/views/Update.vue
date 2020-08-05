@@ -1,5 +1,7 @@
 <template>
-  <FAQForm :faq="faq" :submitForm="updateFAQ" />
+  <FAQForm :faq="faq" :submitForm="updateFAQ">
+    <template slot="button">Zapisz</template>
+  </FAQForm>
 </template>
 
 <script>

@@ -26,7 +26,9 @@
           placeholder="Na przykład: Kolorowe"
         />
       </div>
-      <button type="submit" class="button is-success">Dodaj</button>
+      <button type="submit" class="button is-success">
+        <slot name="button"></slot>
+      </button>
     </div>
   </form>
 </template>

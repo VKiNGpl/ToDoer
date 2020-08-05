@@ -17,21 +17,15 @@
 </template>
 
 <script>
-import { ref } from "@vue/composition-api";
-import { useRouter } from "@u3u/vue-hooks";
+import { useRouter } from '@u3u/vue-hooks';
+
+import API_URL from '../API_URL';
+import useFAQs from '../hooks/useFAQs';
 
 export default {
   setup() {
     const { router } = useRouter();
-    const faqs = ref([]);
-
-    const API_URL = "http://localhost:9999/api/v1/faqs/";
-
-    async function getFAQs() {
-      const response = await fetch(API_URL);
-      const json = await response.json();
-      faqs.value = json;
-    }
+    const { faqs, getFAQs } = useFAQs();
 
     async function removeFAQ(_id) {
       const response = await fetch(API_URL + "/" + _id, {

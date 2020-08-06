@@ -2,7 +2,7 @@ import { ref } from '@vue/composition-api';
 
 import API_URL from '../API_URL';
 
-export default function() {
+export default function UseFAQs() {
     const faqs = ref([]);
 
     async function getFAQs() {

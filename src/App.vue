@@ -4,6 +4,11 @@
     <div class="container mt-5">
       <router-view />
     </div>
+    <!-- <UseFetch url="https://someapi.com">
+      <slot v-slot="{ loading, data, error }">
+
+      </slot>
+    </UseFetch> -->
   </div>
 </template>
 
@@ -18,4 +23,5 @@ export default {
 </script>
 
 <style lang="scss">
+
 </style>

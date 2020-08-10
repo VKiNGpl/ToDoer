@@ -40,6 +40,7 @@ export default {
           name: "home",
         });
       } else {
+        console.log('error')
         // TODO: show an error
       }
     }
